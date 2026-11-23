@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Artista Audiovisual · Larissa Castro Sánchez · arte digital, acuarela, fotografía y palabra</title>
+<meta name="description" content="Artista audiovisual mexicana. Construyo formas para que la experiencia pueda ser vista, sentida y contada: arte digital, acuarela, fotografía y palabra. Colección «Memoria &amp; Flores» en la tienda.">
+<meta name="theme-color" content="#A0A44F">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Artista Audiovisual">
+<meta property="og:title" content="Artista Audiovisual · Larissa Castro Sánchez">
+<meta property="og:description" content="Construyo formas para que la experiencia pueda ser vista, sentida y contada. Arte digital, acuarela, fotografía y palabra.">
+<!-- IMPORTANTE: cuando tengas dominio, cambia TU-DOMINIO.com por tu dirección real (las redes necesitan la ruta completa de la imagen) -->
+<meta property="og:image" content="https://TU-DOMINIO.com/img/og-imagen.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo de Artista Audiovisual sobre una flor rosa">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Larissa Castro Sánchez","alternateName":"Artista Audiovisual","jobTitle":"Artista audiovisual","nationality":"México","description":"Artista audiovisual mexicana: arte digital, acuarela, fotografía y palabra.","email":"mailto:info.artistaaudiovisual@gmail.com","sameAs":["https://www.instagram.com/artistaaudiovisual.estudio/","https://www.behance.net/LarissaCas","https://artistaudio.gumroad.com"]}</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300&family=Caveat:wght@500&display=swap">
+<noscript><style>#portada .logo-slot img,#portada .logo-slot::before{opacity:1!important}</style></noscript>
+<style>
+:root{
+  --paper:#eee9dc; --ink:#1d1f1a; --forest:#4a5a3a; --leaf:#6f8a3d; --verde:#A0A44F;
+  --veil:rgba(243,241,236,.74);
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-snap-type:y proximity;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{font:300 1.125rem/1.6 "Source Sans 3",system-ui,sans-serif;color:var(--ink);background:var(--paper);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--leaf);outline-offset:4px}
+section{min-height:100svh;position:relative;overflow:hidden;scroll-snap-align:start;display:flex}
+.bg{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat}
+.inner{position:relative;z-index:1;width:100%;max-width:1200px;margin:0 auto;padding:clamp(1.5rem,5vw,4rem);padding-top:calc(clamp(1.5rem,5vw,4rem) + env(safe-area-inset-top,0px))}
+
+.logo{font-style:italic;font-weight:300;font-size:clamp(1.6rem,3.2vw,2.6rem);letter-spacing:.04em;line-height:1.1;color:var(--forest)}
+.logo small{display:block;font-size:.8rem;font-style:normal;opacity:.7;letter-spacing:0}
+
+/* Navegación: tira de papel discreta con letra manuscrita; aparece al salir de la portada */
+html{scroll-behavior:smooth}
+.menu{position:fixed;z-index:50;top:calc(14px + env(safe-area-inset-top,0px));right:clamp(12px,2.5vw,32px);display:flex;gap:clamp(.7rem,1.6vw,1.5rem);
+  padding:.3rem 1.1rem .4rem;background:rgba(242,239,230,.88);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  box-shadow:0 4px 14px rgba(30,30,15,.2);border-radius:3px;transform:rotate(-.6deg) translateY(-10px);opacity:0;pointer-events:none;
+  transition:opacity .45s ease,transform .45s ease}
+.menu.visible{opacity:1;pointer-events:auto;transform:rotate(-.6deg)}
+.menu a{position:relative;font:500 1.35rem/1.2 "Caveat","Segoe Print","Bradley Hand",cursive;color:#2a2a22;text-decoration:none;padding:.1rem .1rem}
+.menu a::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:6px;opacity:0;transform:scaleX(.6);transform-origin:left;transition:opacity .25s,transform .25s;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 6' preserveAspectRatio='none'%3E%3Cpath d='M1 3.5C8 1 14 5.5 22 3S36 1.5 44 3.5 54 4 59 2.5' fill='none' stroke='%234a5a3a' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+.menu a:hover::after,.menu a:focus-visible::after,.menu a[aria-current="true"]::after{opacity:1;transform:none}
+.menu a:focus-visible{outline:2px solid #4a5a3a;outline-offset:3px}
+/* indicador de scroll: línea con punto, como el ornamento del logo */
+.desliza{position:absolute;z-index:2;right:clamp(1.5rem,6vw,6rem);bottom:calc(4svh + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;align-items:center;gap:.25rem;
+  font:500 1.4rem/1 "Caveat","Segoe Print",cursive;color:#2a2a22;text-decoration:none;text-shadow:0 0 10px rgba(243,239,228,.95),0 0 4px rgba(243,239,228,.9);transition:opacity .4s}
+.desliza.hide{opacity:0;pointer-events:none}
+.desliza .trazo{position:relative;display:block;width:2px;height:48px;background:#2a2a22;border-radius:2px;box-shadow:0 0 6px rgba(243,239,228,.9)}
+.desliza .trazo::after{content:"";position:absolute;left:50%;top:0;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:#2a2a22;animation:baja 2.4s ease-in-out infinite}
+@keyframes baja{0%{top:0;opacity:0}20%{opacity:1}80%{opacity:1}100%{top:calc(100% - 9px);opacity:0}}
+.desliza:focus-visible{outline:2px solid #2a2a22;outline-offset:6px}
+
+/* 1 — Portada: el video es el fondo */
+#portada{background:var(--paper)}
+#portada video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+/* La franja del video está fija en ~52.7% de la altura y mide ~33.4% (el video se escala con "cover") */
+#portada{--vh:max(100svh,calc(100vw * .428125))}
+#portada .logo-slot{position:absolute;left:0;right:0;z-index:1;height:0;display:flex;align-items:center;justify-content:center;pointer-events:none;
+  top:calc(var(--vh) * .527 - (var(--vh) - 100svh) / 2)}
+#portada .logo-slot img{display:block;position:relative;height:min(calc(var(--vh) * .27),68vw,340px);width:auto;opacity:0;filter:drop-shadow(0 2px 10px rgba(0,0,0,.3))}
+#portada .logo-slot::before{content:"";position:absolute;width:min(calc(var(--vh) * .7),95vw);height:min(calc(var(--vh) * .44),60vw);background:radial-gradient(closest-side,rgba(24,30,14,.5),rgba(24,30,14,.25) 55%,transparent);opacity:0}
+#portada .logo-slot.ready::before,#portada .logo-slot.ready img{animation:logoIn 2.6s cubic-bezier(.22,.61,.36,1) .4s both}
+@keyframes logoIn{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+
+/* 2 — Presentación: lienzo 16:9 con el mismo "cover" del fondo; todo se coloca en % del lienzo.
+   Medidas tomadas de la imagen guía (1920×1080). */
+#quien{background:#f0f0ec}
+#quien .stage{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:max(100%,calc(100svh * 16 / 9));aspect-ratio:16/9;background:url("img/nopal.webp") center/100% 100% no-repeat}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#quien img{display:block;width:100%;height:auto}
+#quien .overlay{position:absolute;left:3.6%;top:25.5%;width:67.5%;pointer-events:none}
+#quien .m{display:none}
+/* notas de cuaderno: papel con sombra, ligeramente giradas */
+#quien .note{position:absolute;filter:drop-shadow(0 7px 12px rgba(40,34,18,.28));--rot:-2.5deg;transform:rotate(var(--rot))}
+#quien .note-sketch{left:.7%;top:.2%;width:33.6%}
+#quien .note-sketch::before{content:"";position:absolute;z-index:1;top:-2.2%;left:41%;width:19%;height:8.5%;
+  background:rgba(226,210,172,.72);transform:rotate(-4deg);box-shadow:0 1px 3px rgba(40,34,18,.25);
+  clip-path:polygon(0 8%,4% 0,8% 10%,12% 0,100% 0,96% 12%,100% 24%,96% 36%,100% 50%,96% 62%,100% 76%,96% 88%,100% 100%,0 100%,4% 88%,0 76%,4% 62%,0 50%,4% 36%,0 24%,4% 12%)}
+#quien .note-ig{left:48.6%;top:.7%;width:23.7%;--rot:-5deg;display:block;transition:transform .25s ease,filter .25s ease}
+#quien .note-ig:hover,#quien .note-ig:focus-visible{transform:rotate(-2.5deg) translateY(5px) scale(1.04);filter:drop-shadow(0 12px 18px rgba(40,34,18,.34));outline:none}
+#quien .note-ig:focus-visible{outline:3px solid var(--leaf);outline-offset:6px}
+
+/* 3 — Trabajos "en pared": lienzo 16:9 (mismo "cover" que el fondo); medidas tomadas de la imagen guía 1920×1080 */
+#trabajos{background:#A0A44F}
+#trabajos .stage{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:max(100%,calc(100svh * 16 / 9));aspect-ratio:16/9;background:url("img/fondo-verde.jpg") center/100% 100% no-repeat}
+#trabajos .m{display:none}
+.work{position:absolute;display:block;overflow:hidden;box-shadow:0 6px 18px rgba(30,40,15,.3);
+  transition:transform .25s ease,box-shadow .25s ease;--hr:-1.2deg}
+.work img{display:block;width:100%;height:100%;object-fit:cover}
+.work:hover,.work:focus-visible,.work:active{transform:translateY(-5px) rotate(var(--hr)) scale(1.045);box-shadow:0 16px 30px rgba(30,40,15,.42);outline:none}
+.work:focus-visible{outline:3px solid #fff;outline-offset:5px}
+.w1{left:7.86%;top:15.56%;width:16.56%;height:56.67%;--hr:-1.5deg}
+.w2{left:25.47%;top:10.46%;width:25.99%;height:69.35%;--hr:1deg}
+.w3{left:52.71%;top:14.17%;width:33.54%;height:37.78%;--hr:-1deg}
+.w4{left:51.98%;top:53.43%;width:15.63%;height:41.11%;--hr:1.5deg}
+.w5{left:68.44%;top:55.37%;width:27.55%;height:30.93%;--hr:-1.2deg}
+#trabajos .overlay{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:2}
+#trabajos .postit{position:absolute;left:.78%;top:.46%;width:17.55%;height:auto;z-index:3;pointer-events:none;filter:drop-shadow(0 8px 12px rgba(30,25,10,.35))}
+
+/* 4 — Tienda: dibujo botánico + papel calca translúcido + texto + icono de Gumroad */
+#tienda{background:#e9e9e4}
+#tienda .stage{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:max(100%,calc(100svh * 16 / 9));aspect-ratio:16/9;background:url("img/botanica.webp") center/100% 100% no-repeat}
+#tienda .m{display:none}
+#tienda .calca{position:absolute;left:18.49%;top:10.65%;width:64.06%;height:78.7%;background:url("img/calca-textura.jpg") center/100% 100%;opacity:.8;box-shadow:0 6px 24px rgba(40,50,25,.12)}
+#tienda .texto{position:absolute;left:10.36%;top:9.54%;width:79%;height:auto;pointer-events:none}
+#tienda .gum-grupo{display:contents}
+#tienda .flecha{position:absolute;left:47.66%;top:59.26%;width:17.24%;height:auto;pointer-events:none}
+#tienda .gum{position:absolute;left:30.47%;top:54.63%;width:13.9%;display:block;border-radius:50%;
+  transition:transform .4s cubic-bezier(.34,1.56,.64,1),filter .3s ease}
+#tienda .gum img{display:block;width:100%;height:auto}
+#tienda .gum:hover,#tienda .gum:focus-visible,#tienda .gum:active,
+#tienda .stage:has(.gum-text:hover) .gum,#tienda .stage:has(.gum-text:focus-visible) .gum{
+  transform:translateY(-6px) rotate(-16deg) scale(1.12);filter:drop-shadow(0 12px 12px rgba(30,40,20,.3));outline:none}
+#tienda .gum:focus-visible{outline:3px solid var(--forest);outline-offset:6px}
+#tienda .gum-text{position:absolute;left:48.4%;top:50.9%;width:26.8%;height:7.9%;display:block}
+#tienda .gum-text:focus-visible{outline:3px solid var(--forest);outline-offset:4px}
+
+/* 6 — Edición limitada: pared de fondo + marco con la portada + etiqueta de precio como botón (medidas de la imagen de referencia) */
+#edicion{background:#d9d4c8}
+#edicion .stage{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:max(100%,calc(100svh * 16 / 9));aspect-ratio:16/9;background:url("img/pared.jpg") center/100% 100% no-repeat}
+#edicion .marco{position:absolute;left:14.35%;top:25.3%;width:42.3%;height:auto;transform:rotate(-9.5deg);filter:drop-shadow(26px 30px 26px rgba(55,42,28,.4))}
+#edicion .edicion-img{position:absolute;left:56.85%;top:28.3%;width:34.9%;height:auto;pointer-events:none;filter:drop-shadow(0 6px 10px rgba(50,40,25,.16))}
+#edicion .cta{position:absolute;left:79.5%;top:66.5%;width:15.6%;display:block;color:#2a2a22;text-decoration:none;transition:transform .25s ease}
+#edicion .cta img{display:block;width:100%;height:auto;filter:drop-shadow(5px 6px 0 rgba(40,30,25,.5));
+  animation:tagPop 3.6s cubic-bezier(.3,.7,.4,1) infinite;transform-origin:50% 60%}
+#edicion .cta-txt{display:block;margin-top:.5rem;text-align:center;font:500 1.55rem/1 "Caveat","Segoe Print",cursive;transform:rotate(-4deg);
+  text-shadow:0 0 8px rgba(235,230,218,.9)}
+#edicion .cta:hover,#edicion .cta:focus-visible,#edicion .cta:active{transform:scale(1.1) rotate(-3deg);outline:none}
+#edicion .cta:focus-visible img{outline:3px solid #2a2a22;outline-offset:6px}
+/* anuncio de los 80: se agacha, salta, gira y aterriza con rebote */
+@keyframes tagPop{
+  0%,54%{transform:perspective(700px) translateY(0) rotateY(0deg) rotate(-7deg) scale(1)}
+  60%{transform:perspective(700px) translateY(0) rotateY(0deg) rotate(-7deg) scale(.93,1.07)}
+  67%{transform:perspective(700px) translateY(-36px) rotateY(180deg) rotate(-7deg) scale(1.16)}
+  75%{transform:perspective(700px) translateY(-8px) rotateY(360deg) rotate(-7deg) scale(1.09)}
+  80%{transform:perspective(700px) translateY(0) rotateY(360deg) rotate(-12deg) scale(1.05,.94)}
+  86%{transform:perspective(700px) translateY(-9px) rotateY(360deg) rotate(-3deg) scale(1)}
+  92%{transform:perspective(700px) translateY(0) rotateY(360deg) rotate(-9deg) scale(1)}
+  100%{transform:perspective(700px) translateY(0) rotateY(360deg) rotate(-7deg) scale(1)}
+}
+
+/* 5 — Contacto: foto de flor + papel de algodón con el correo + botones de redes debajo */
+#contacto{align-items:center;justify-content:center;background:#2c3a22}
+#contacto .bg{background-image:url("img/contacto.webp")}
+#contacto .col{position:relative;z-index:1;width:min(92vw,1100px,calc((100svh - 84px) * 1.06))}
+#contacto .papel{position:relative;width:100%;aspect-ratio:2231/1654;filter:drop-shadow(0 14px 26px rgba(10,15,5,.45));container-type:inline-size}
+#contacto .papel>img{display:block;width:100%;height:auto}
+/* el correo se apoya en la línea negra (medida sobre la imagen: 32.85% desde la izquierda, 58.1% de ancho, ~-2.8°) */
+#contacto .correo{position:absolute;left:32.85%;top:77%;width:58.1%;display:block;transform:rotate(-2.8deg);transform-origin:0 79.4%;transition:transform .3s ease}
+#contacto .correo svg{display:block;width:100%;height:auto;overflow:visible}
+#contacto .correo text{font-family:"Caveat","Segoe Print","Bradley Hand",cursive;font-weight:500;font-size:112px;fill:#26261f}
+#contacto .correo:hover,#contacto .correo:focus-visible,#contacto .correo:active{transform:rotate(-2.8deg) translateY(-4px) scale(1.03)}
+#contacto .correo:hover text,#contacto .correo:focus-visible text{text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:10px}
+#contacto .correo:focus-visible{outline:3px solid #26261f;outline-offset:6px}
+#contacto .redes{list-style:none;margin:3.2% 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:2.4%}
+#contacto .red{display:block;width:100%;padding:0;border:0;background:none;cursor:pointer;color:inherit;--hr:-2deg;
+  filter:drop-shadow(0 6px 8px rgba(10,15,5,.4));transition:transform .25s ease,filter .25s ease}
+#contacto .red img{display:block;width:100%;height:auto}
+#contacto li:nth-child(2) .red{--hr:2deg}#contacto li:nth-child(3) .red{--hr:-1.5deg}#contacto li:nth-child(4) .red{--hr:1.8deg}
+#contacto .red:hover,#contacto .red:focus-visible,#contacto .red:active{transform:translateY(-7px) rotate(var(--hr)) scale(1.07);filter:drop-shadow(0 14px 14px rgba(10,15,5,.5));outline:none}
+#contacto .red:focus-visible{outline:3px solid #f4eedf;outline-offset:4px}
+
+/* Formulario del boletín (ventana emergente) */
+#boletin{border:0;padding:0;background:transparent;width:min(92vw,460px);max-width:none;margin:auto;overflow:visible}
+#boletin::backdrop{background:rgba(28,34,18,.6);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+#boletin .hoja{position:relative;background:#f3efe4;color:#26261f;padding:1.7rem 1.6rem 1.5rem;border-radius:3px;box-shadow:0 18px 40px rgba(0,0,0,.45);transform:rotate(-.7deg)}
+#boletin h2{font:500 2.1rem/1.05 "Caveat","Segoe Print",cursive;margin-bottom:.35rem;color:#3d4a2f}
+#boletin p{font:400 1rem/1.45 "Source Sans 3",system-ui,sans-serif;margin-bottom:1rem}
+#boletin label{display:block;font:600 .8rem/1 "Source Sans 3",system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;margin:.9rem 0 .2rem;color:#4a5a3a}
+#boletin input[type=text],#boletin input[type=email]{width:100%;font:400 1.15rem/1.3 "Source Sans 3",system-ui,sans-serif;color:#26261f;background:transparent;border:0;border-bottom:2px solid #4a5a3a;padding:.35rem .1rem;border-radius:0}
+#boletin input:focus-visible{outline:2px solid #4a5a3a;outline-offset:3px}
+#boletin .trampa{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+#boletin .acciones{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.4rem}
+#boletin .enviar{font:500 1.6rem/1 "Caveat","Segoe Print",cursive;background:#4a5a3a;color:#f4eedf;border:0;padding:.55rem 1.3rem .65rem;border-radius:2px;cursor:pointer;transition:transform .2s}
+#boletin .enviar:hover,#boletin .enviar:focus-visible{transform:translateY(-3px) rotate(-1.5deg)}
+#boletin .cerrar{position:absolute;top:.4rem;right:.6rem;background:none;border:0;font:400 1.9rem/1 "Source Sans 3",sans-serif;color:#4a5a3a;cursor:pointer;padding:.2rem .5rem}
+#boletin .nota{font-size:.82rem;opacity:.75;margin:.9rem 0 0}
+#boletin .estado{font:500 1.35rem/1.2 "Caveat","Segoe Print",cursive;color:#3d4a2f;margin-top:.8rem;min-height:1.4em}
+
+@media (max-width:900px),(max-aspect-ratio:3/2){
+  #quien{display:block;min-height:100svh}
+  #quien .stage{position:relative;left:auto;top:auto;transform:none;width:100%;aspect-ratio:auto;background:none;
+    display:flex;flex-direction:column;align-items:center;gap:1.3rem;
+    padding:calc(1.5rem + env(safe-area-inset-top,0px)) 1.25rem 62vw}
+  #quien .stage::after{content:"";position:absolute;right:0;bottom:0;width:100%;height:68vw;background:url("img/nopal.webp") right bottom/auto 100% no-repeat}
+  #quien .stage>*{position:relative;z-index:1}
+  #quien .overlay{display:none}
+  #quien .m{display:block}
+  #quien .note{left:auto;top:auto}
+  #quien .note-sketch{width:min(92%,520px);order:1}
+  #quien .m1{width:min(72%,360px);align-self:flex-start;order:2}
+  #quien .m2{width:min(100%,560px);order:3}
+  #quien .m3{width:min(62%,280px);align-self:flex-end;order:4}
+  #quien .m4{width:min(70%,320px);align-self:flex-start;order:5}
+  #quien .m5{width:min(86%,380px);align-self:flex-end;order:6}
+  #quien .note-ig{width:min(66%,300px);order:7}
+}
+@media (max-width:900px),(max-aspect-ratio:3/2){
+  .menu{top:auto;right:auto;left:50%;bottom:calc(12px + env(safe-area-inset-bottom,0px));gap:.55rem;padding:.3rem .75rem .4rem;white-space:nowrap;transform:translateX(-50%) translateY(10px) rotate(-.6deg)}
+  .menu.visible{transform:translateX(-50%) rotate(-.6deg)}
+  .menu a{font-size:1.02rem}
+  .desliza{right:auto;left:50%;transform:translateX(-50%)}
+  /* 3 — Trabajos: piezas apiladas, cada texto junto a su foto */
+  #trabajos{display:block;min-height:100svh;background:#A0A44F url("img/fondo-verde.jpg") top center/1200px auto repeat}
+  #trabajos .stage{position:relative;left:auto;top:auto;transform:none;width:100%;aspect-ratio:auto;background:none;
+    display:flex;flex-direction:column;align-items:center;gap:1.1rem;padding:calc(1.5rem + env(safe-area-inset-top,0px)) 1.25rem 5.5rem}
+  #trabajos .overlay{display:none}
+  #trabajos .m{display:block;height:auto}
+  #trabajos .postit{position:relative;left:auto;top:auto;width:min(60%,250px);align-self:flex-start;order:1}
+  #trabajos .work{position:relative;left:auto;top:auto;height:auto}
+  #trabajos .work img{height:auto}
+  #trabajos .w1{width:min(62%,300px);order:2;align-self:center}
+  #trabajos .t-costa{width:min(64%,260px);order:3;align-self:flex-start}
+  #trabajos .t-mx{width:min(64%,250px);order:4;align-self:flex-start}
+  #trabajos .w2{width:min(84%,380px);order:5}
+  #trabajos .t-montana{width:min(76%,320px);order:6;align-self:flex-start}
+  #trabajos .t-otro{width:min(46%,190px);order:7;align-self:flex-end}
+  #trabajos .w3{width:100%;max-width:520px;order:8}
+  #trabajos .t-varias{width:min(60%,240px);order:9;align-self:flex-end}
+  #trabajos .w4{width:min(64%,300px);order:10;align-self:flex-start}
+  #trabajos .t-playa{width:min(72%,300px);order:11;align-self:flex-end}
+  #trabajos .w5{width:100%;max-width:520px;order:12}
+  #trabajos .t-textos{width:min(62%,250px);order:13;align-self:flex-end}
+  /* 6 — Edición limitada */
+  #edicion{display:block;min-height:100svh;background:#d9d4c8 url("img/pared.jpg") center/cover no-repeat}
+  #edicion .stage{position:relative;left:auto;top:auto;transform:none;width:100%;min-height:100svh;aspect-ratio:auto;background:none;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.1rem;padding:calc(2rem + env(safe-area-inset-top,0px)) 1.25rem 5.5rem}
+  #edicion .marco{position:relative;left:auto;top:auto;width:min(94%,540px);transform:rotate(-4deg);filter:drop-shadow(12px 14px 16px rgba(55,42,28,.4))}
+  #edicion .edicion-img{position:relative;left:auto;top:auto;width:min(80%,360px)}
+  #edicion .cta{position:relative;left:auto;top:auto;width:min(48%,210px);margin-top:-.5rem}
+  /* 4 — Tienda */
+  #tienda{display:block;min-height:100svh;background:#e9e9e4 url("img/botanica.webp") center/cover no-repeat}
+  #tienda .stage{position:relative;left:auto;top:auto;transform:none;width:100%;min-height:100svh;aspect-ratio:auto;background:none;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem;
+    padding:calc(3.5rem + env(safe-area-inset-top,0px)) 2.25rem 3.5rem}
+  #tienda .calca{inset:calc(1.5rem + env(safe-area-inset-top,0px)) 1rem 1.5rem 1rem;width:auto;height:auto;left:1rem;top:calc(1.5rem + env(safe-area-inset-top,0px))}
+  #tienda .texto,#tienda .gum-text{display:none}
+  #tienda .m{display:block;position:relative;z-index:1;height:auto}
+  #tienda .t-piezas{width:min(100%,520px)}
+  #tienda .t-descubre-a{width:min(80%,360px);align-self:flex-end}
+  #tienda .t-descubre-a img{display:block;width:100%;height:auto}
+  /* icono a la izquierda y flecha a la derecha, a la misma altura: la flecha sale de "Descubre el Estudio" y apunta al icono */
+  #tienda .gum-grupo{display:flex;align-items:center;justify-content:space-between;gap:.4rem;width:min(88%,410px);align-self:flex-end;position:relative;z-index:1}
+  #tienda .gum-grupo .gum{position:relative;left:auto;top:auto;width:min(44%,170px);margin:0;flex:none}
+  #tienda .gum-grupo .flecha{position:relative;left:auto;top:auto;width:min(50%,190px);margin:0;flex:none;transform:translateY(-22%)}
+}
+/* En pantallas táctiles no existe "pasar el cursor": los botones se mueven solos de vez en cuando para invitar al toque */
+@media (hover:none),(pointer:coarse){
+  @keyframes flota{
+    0%,100%{transform:translateY(0) rotate(0deg) scale(1)}
+    22%{transform:translateY(-10px) rotate(var(--hr)) scale(1.045)}
+    44%{transform:translateY(0) rotate(0deg) scale(1)}
+    66%{transform:translateY(-5px) rotate(calc(var(--hr) * -.7)) scale(1.025)}
+    84%{transform:translateY(0) rotate(0deg) scale(1)}
+  }
+  .work{animation:flota 4s ease-in-out infinite}
+  .w1{animation-delay:0s}.w2{animation-delay:.6s}.w3{animation-delay:1.2s}.w4{animation-delay:1.8s}.w5{animation-delay:2.4s}
+  .work:active{animation:none;transform:translateY(-5px) rotate(var(--hr)) scale(1.045)}
+
+  @keyframes gumMeneo{
+    0%,48%,100%{transform:none}
+    56%{transform:translateY(-14px) rotate(-18deg) scale(1.14)}
+    64%{transform:translateY(0) rotate(12deg) scale(1.05)}
+    72%{transform:translateY(-7px) rotate(-9deg) scale(1.08)}
+    82%{transform:translateY(0) rotate(5deg) scale(1.02)}
+    92%{transform:none}
+  }
+  #tienda .gum{animation:gumMeneo 3.2s ease-in-out infinite}
+  #tienda .gum:active{animation:none}
+
+  @keyframes notaMeneo{
+    0%,52%,100%{transform:rotate(-5deg)}
+    60%{transform:rotate(-1.5deg) translateY(6px) scale(1.05)}
+    70%{transform:rotate(-7deg) scale(1.02)}
+    80%{transform:rotate(-3deg) translateY(3px) scale(1.04)}
+  }
+  #quien .note-ig{animation:notaMeneo 4.2s ease-in-out infinite}
+  #quien .note-ig:active{animation:none}
+
+  @keyframes redMeneo{
+    0%,40%,100%{transform:none}
+    52%{transform:translateY(-8px) rotate(var(--hr)) scale(1.08)}
+    64%{transform:translateY(0) rotate(calc(var(--hr) * -.6)) scale(1.02)}
+    76%{transform:none}
+  }
+  #contacto .red{animation:redMeneo 4.4s ease-in-out infinite}
+  #contacto li:nth-child(2) .red{animation-delay:.5s}#contacto li:nth-child(3) .red{animation-delay:1s}#contacto li:nth-child(4) .red{animation-delay:1.5s}
+  #contacto .red:active{animation:none}
+}
+@media (prefers-reduced-motion:reduce){.work,#tienda .gum,#quien .note-ig,#contacto .red{animation:none!important}#edicion .cta img{animation:none;transform:rotate(-7deg)}#contacto .red,#edicion .cta{transition:none}html{scroll-behavior:auto}.desliza .trazo::after{animation:none;top:calc(100% - 9px);opacity:1}.menu{transition:none}#portada .logo-slot img,#portada .logo-slot::before{opacity:1;animation:none!important}.work,#quien .note-ig,#tienda .gum,#contacto .correo{transition:none}.work:hover,.work:focus-visible{transform:none}}
+</style>
+</head>
+<body>
+<nav class="menu" id="menu" aria-label="Secciones del sitio">
+  <a href="#portada">Inicio</a><a href="#quien">Mirada</a><a href="#trabajos">Trazos</a><a href="#tienda">Piezas</a><a href="#edicion">Edición</a><a href="#contacto">Hablemos</a>
+</nav>
+
+<!-- 1. PORTADA -->
+<section id="portada" aria-label="Portada">
+  <h1 class="sr-only">Artista Audiovisual · Larissa Castro Sánchez</h1>
+  <video id="flor" src="video/flor-morada.mp4" poster="img/flor-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+  <a class="desliza" href="#quien" aria-label="Deslizar hacia abajo"><span>desliza</span><i class="trazo" aria-hidden="true"></i></a>
+  <div class="logo-slot" id="logo">
+    <img src="img/logo.webp" alt="Artista Audiovisual: manos que sostienen un ojo en espiral" width="982" height="937">
+  </div>
+  </section>
+
+<!-- 2. PRESENTACIÓN -->
+<section id="quien" aria-labelledby="quien-t">
+  <div class="stage">
+    <h2 class="sr-only" id="quien-t">¿Quién es Artista Audiovisual?</h2>
+    <!-- Nota de cuaderno con el boceto del logo (papel calca) -->
+    <img class="note note-sketch" src="img/nota-calca.webp" alt="Nota en papel calca con el boceto del logo: manos que sostienen un ojo en espiral, y sus significados" width="1230" height="850">
+    <!-- Texto central (escritorio) -->
+    <img class="overlay" src="img/texto-quien.webp" alt="¿Quién es Artista Audiovisual? Alguien que construye formas para que la experiencia pueda ser vista, sentida y contada. La mirada que conecta, las manos que sostienen, la práctica que trasciende. El camino que me enseña sobre realidad." width="1920" height="1080">
+    <!-- Texto central en piezas (móvil) -->
+    <img class="m m1" src="img/texto-m1.webp" alt="¿Quién es…" loading="lazy">
+    <img class="m m2" src="img/texto-m2.webp" alt="Artista Audiovisual" loading="lazy">
+    <img class="m m3" src="img/texto-m3.webp" alt="El camino que me enseña sobre realidad" loading="lazy">
+    <img class="m m4" src="img/texto-m4.webp" alt="Alguien que construye formas para que la experiencia pueda ser vista, sentida y contada." loading="lazy">
+    <img class="m m5" src="img/texto-m5.webp" alt="La mirada que conecta. Las manos que sostienen. La práctica que trasciende." loading="lazy">
+    <!-- Botón: nota "Conoce más" → Instagram -->
+    <a class="note note-ig" href="https://www.instagram.com/artistaaudiovisual.estudio/" target="_blank" rel="noopener" aria-label="Conoce más: Instagram de Artista Audiovisual (@artistaaudiovisual.estudio)">
+      <img src="img/nota-instagram.webp" alt="" width="1222" height="875">
+    </a>
+  </div>
+</section>
+
+<!-- 3. TRABAJOS (en pared) -->
+<section id="trabajos" aria-label="Trabajos">
+  <div class="stage">
+    <a class="work w1" href="https://www.behance.net/gallery/222498673/ACUARELA" target="_blank" rel="noopener" aria-label="Acuarela de La Bocana, Huatulco (Behance)"><img src="img/acuarela-bocana.webp" alt="Acuarela de la playa de La Bocana, Huatulco" loading="lazy"></a>
+    <a class="work w2" href="https://adobe.ly/4BnlHjD" target="_blank" rel="noopener" aria-label="Fotografía de paisaje boscoso (Lightroom)"><img src="img/paisaje-bosque.webp" alt="Fotografía de un pueblo entre el bosque y la niebla" loading="lazy"></a>
+    <a class="work w3" href="https://adobe.ly/4zPUKDj" target="_blank" rel="noopener" aria-label="Fotografía del puesto de pescado (Lightroom)"><img src="img/puesto-pescado.webp" alt="Dos vendedoras en un puesto de pescado" loading="lazy"></a>
+    <a class="work w4" href="https://adobe.ly/4kj9git" target="_blank" rel="noopener" aria-label="Fotografía de hoja de playa (Lightroom)"><img src="img/hoja-playa.webp" alt="Hoja de uva de mar" loading="lazy"></a>
+    <a class="work w5" href="https://www.behance.net/LarissaCas" target="_blank" rel="noopener" aria-label="Dibujo a lápiz de una montaña (Behance)"><img src="img/dibujo-montana.webp" alt="Dibujo a lápiz de una montaña" loading="lazy"></a>
+    <!-- Texto escrito a mano alrededor de las fotos (escritorio) -->
+    <img class="overlay" src="img/texto-fotos.webp" alt="Acuarelas de la costa. Un pueblito de México, otro pueblito. Fotos varias. Textos, ilustraciones y pensamientos. Fotos de un viaje a la montaña. Fotos de un viaje a la playa." width="1920" height="1080" loading="lazy">
+    <!-- Texto en piezas (móvil) -->
+    <img class="m t-costa" src="img/t-costa.webp" alt="Acuarelas de la costa" loading="lazy">
+    <img class="m t-mx" src="img/t-mx.webp" alt="Un pueblito de México" loading="lazy">
+    <img class="m t-montana" src="img/t-montana.webp" alt="Fotos de un viaje a la montaña" loading="lazy">
+    <img class="m t-otro" src="img/t-otro.webp" alt="Otro pueblito" loading="lazy">
+    <img class="m t-varias" src="img/t-varias.webp" alt="Fotos varias" loading="lazy">
+    <img class="m t-playa" src="img/t-playa.webp" alt="Fotos de un viaje a la playa" loading="lazy">
+    <img class="m t-textos" src="img/t-textos.webp" alt="Textos, ilustraciones y pensamientos" loading="lazy">
+    <img class="postit" src="img/postit.webp" alt="Nota adhesiva: Cosas que vi, sentí o pensé… que no dije y guardé en un papel." width="893" height="1016">
+  </div>
+</section>
+
+<!-- 4. TIENDA -->
+<section id="tienda" aria-labelledby="tienda-t">
+  <div class="stage">
+    <h2 class="sr-only" id="tienda-t">Piezas para llevar. Descubre el Estudio.</h2>
+    <div class="calca" aria-hidden="true"></div>
+    <img class="texto" src="img/texto-tienda.webp" alt="" aria-hidden="true" width="1920" height="1080">
+    <img class="m t-piezas" src="img/t-piezas.webp" alt="" aria-hidden="true">
+    <a class="m t-descubre-a" href="https://artistaudio.gumroad.com/?utm_source=sitio&utm_medium=web&utm_campaign=lanzamiento_memoria_flores&utm_content=texto_descubre" target="_blank" rel="noopener" aria-label="Descubre el Estudio: tienda en Gumroad"><img src="img/t-descubre.webp" alt="Descubre el Estudio"></a>
+    <div class="gum-grupo">
+      <a class="gum" href="https://artistaudio.gumroad.com/?utm_source=sitio&utm_medium=web&utm_campaign=lanzamiento_memoria_flores&utm_content=icono_tienda" target="_blank" rel="noopener" aria-label="Tienda en Gumroad"><img src="img/gumroad.webp" alt="Logo de Gumroad" width="480" height="476"></a>
+      <img class="flecha" src="img/flecha-gumroad.webp" alt="" aria-hidden="true" width="331" height="189">
+    </div>
+    <a class="gum-text" href="https://artistaudio.gumroad.com/?utm_source=sitio&utm_medium=web&utm_campaign=lanzamiento_memoria_flores&utm_content=texto_descubre" target="_blank" rel="noopener" aria-label="Descubre el Estudio: tienda en Gumroad"></a>
+  </div>
+</section>
+
+<!-- 6. EDICIÓN LIMITADA -->
+<section id="edicion" aria-labelledby="edicion-t">
+  <div class="stage">
+    <h2 class="sr-only" id="edicion-t">Edición limitada: Memoria &amp; Flores, colección de arte digital. $52.</h2>
+    <img class="marco" src="img/marco-coleccion.webp" alt="Portada de la colección Memoria &amp; Flores enmarcada en madera: una flor dibujada sobre fondo verde oscuro" width="1150" height="824" loading="lazy">
+    <img class="edicion-img" src="img/edicion-limitada.webp" alt="Edición limitada" width="769" height="631" loading="lazy">
+    <a class="cta" href="https://artistaudio.gumroad.com/l/mvdshf?utm_source=sitio&utm_medium=web&utm_campaign=lanzamiento_memoria_flores&utm_content=etiqueta_precio" target="_blank" rel="noopener" aria-label="Ver la colección Memoria &amp; Flores, edición limitada, $52, en Gumroad">
+      <img src="img/etiqueta-precio.webp" alt="Etiqueta de precio: $52" width="752" height="402" loading="lazy">
+      <span class="cta-txt" aria-hidden="true">ver colección</span>
+    </a>
+  </div>
+</section>
+
+<!-- 5. CONTACTO -->
+<section id="contacto" aria-labelledby="contacto-t">
+  <div class="bg" role="img" aria-label="Flores blancas entre hojas verdes"></div>
+  <div class="col">
+    <div class="papel">
+      <h2 class="sr-only" id="contacto-t">Hablemos</h2>
+      <img src="img/papel-algodon.webp" alt="Papel de algodón verde con el logotipo Artista Audiovisual y la palabra «Hablemos»" width="1800" height="1334" loading="lazy">
+      <a class="correo" href="mailto:info.artistaaudiovisual@gmail.com" aria-label="Escribir a info.artistaaudiovisual@gmail.com">
+        <svg viewBox="0 0 1296 170" aria-hidden="true" focusable="false"><text x="0" y="135" textLength="1290" lengthAdjust="spacingAndGlyphs">info.artistaaudiovisual@gmail.com</text></svg>
+      </a>
+    </div>
+    <ul class="redes" aria-label="Redes y boletín">
+      <li><a class="red" href="https://www.instagram.com/artistaaudiovisual.estudio/" target="_blank" rel="noopener" aria-label="Instagram: @artistaaudiovisual.estudio"><img src="img/red-ig.webp" alt="" width="720" height="534" loading="lazy"></a></li>
+      <li><a class="red" href="https://www.facebook.com/share/1KH2MwVNCj/" target="_blank" rel="noopener" aria-label="Facebook de Artista Audiovisual"><img src="img/red-fb.webp" alt="" width="720" height="534" loading="lazy"></a></li>
+      <li><a class="red" href="https://www.behance.net/LarissaCas" target="_blank" rel="noopener" aria-label="Behance: portafolio de Larissa Castro"><img src="img/red-bh.webp" alt="" width="720" height="534" loading="lazy"></a></li>
+      <li><button class="red" type="button" id="abrir-boletin" aria-haspopup="dialog" aria-label="Suscribirme al boletín"><img src="img/red-nw.webp" alt="" width="720" height="534" loading="lazy"></button></li>
+    </ul>
+  </div>
+</section>
+
+<dialog id="boletin" aria-labelledby="boletin-t">
+  <form class="hoja" method="dialog" id="form-boletin" novalidate>
+    <button class="cerrar" type="button" id="cerrar-boletin" aria-label="Cerrar">×</button>
+    <h2 id="boletin-t">Recibe las novedades</h2>
+    <p>Déjame tu nombre y tu correo y te aviso cuando haya una colección nueva o una edición limitada.</p>
+    <label for="bol-nombre">Nombre</label>
+    <input type="text" id="bol-nombre" name="nombre" autocomplete="name" required>
+    <label for="bol-correo">Correo</label>
+    <input type="email" id="bol-correo" name="correo" autocomplete="email" required>
+    <div class="trampa" aria-hidden="true"><label for="bol-web">No llenar</label><input type="text" id="bol-web" name="web" tabindex="-1" autocomplete="off"></div>
+    <div class="acciones"><button class="enviar" type="submit">Suscribirme</button></div>
+    <p class="estado" id="estado-boletin" role="status" aria-live="polite"></p>
+    <p class="nota">Solo usaré tu correo para enviarte avisos de nuevas colecciones. Puedes pedirme que te quite cuando quieras.</p>
+  </form>
+</dialog>
+
+<script>
+(function(){var l=document.getElementById("logo"),on=function(){l.classList.add("ready")};
+ if(document.readyState==="complete")on();else window.addEventListener("load",on);setTimeout(on,3000);})();
+/* Video de la portada: arranque automático con respaldos (algunos modos de ahorro de batería lo bloquean hasta el primer toque) */
+(function(){
+  var v=document.getElementById("flor"); if(!v) return;
+  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduce){v.removeAttribute("autoplay");v.pause();return;}
+  v.muted=true; v.defaultMuted=true; v.setAttribute("playsinline","");
+  function go(){var p=v.play(); if(p&&p.catch)p.catch(function(){});}
+  go(); v.addEventListener("loadeddata",go); v.addEventListener("canplay",go);
+  document.addEventListener("visibilitychange",function(){if(!document.hidden&&v.paused)go();});
+  ["touchstart","pointerdown","keydown","scroll"].forEach(function(ev){
+    window.addEventListener(ev,function h(){if(v.paused)go();window.removeEventListener(ev,h);},{passive:true});
+  });
+})();
+</script>
+<script>
+(function(){
+  var m=document.getElementById("menu"),d=document.querySelector(".desliza");
+  function onS(){var y=window.scrollY||0,h=window.innerHeight;m.classList.toggle("visible",y>h*.45);if(d)d.classList.toggle("hide",y>40);}
+  window.addEventListener("scroll",onS,{passive:true});onS();
+  var links=[].slice.call(m.querySelectorAll("a")),map={};
+  links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
+      links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[e.target.id];if(a)a.setAttribute("aria-current","true");});},
+      {rootMargin:"-45% 0px -45% 0px",threshold:0});
+    Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});
+  }
+})();
+</script>
+<script>
+/* Boletín: ventana con nombre y correo.
+   Para guardar las suscripciones en un servicio de correo (MailerLite, Buttondown, Formspree…) pega su dirección de envío aquí.
+   Mientras esté vacío, se abre tu programa de correo con los datos ya escritos. */
+var NEWSLETTER_ENDPOINT = "";
+var NEWSLETTER_EMAIL = "info.artistaaudiovisual@gmail.com";
+(function(){
+  var dlg=document.getElementById("boletin"),form=document.getElementById("form-boletin"),est=document.getElementById("estado-boletin");
+  var abrir=document.getElementById("abrir-boletin"),cerrar=document.getElementById("cerrar-boletin");
+  if(!dlg||!form||!abrir) return;
+  abrir.addEventListener("click",function(){est.textContent="";if(dlg.showModal){dlg.showModal();}else{dlg.setAttribute("open","");}document.getElementById("bol-nombre").focus();});
+  cerrar.addEventListener("click",function(){dlg.close();});
+  dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close();});
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    var n=form.nombre.value.trim(),c=form.correo.value.trim();
+    if(form.web.value){return;}                       /* trampa anti-spam */
+    if(!n||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(c)){est.textContent="Revisa tu nombre y tu correo, por favor.";return;}
+    if(NEWSLETTER_ENDPOINT){
+      est.textContent="Enviando…";
+      var fd=new FormData();fd.append("nombre",n);fd.append("correo",c);fd.append("origen","sitio-boletin");
+      fetch(NEWSLETTER_ENDPOINT,{method:"POST",body:fd,headers:{"Accept":"application/json"}})
+        .then(function(r){if(!r.ok)throw 0;est.textContent="¡Gracias! Quedaste en la lista.";form.reset();})
+        .catch(function(){est.textContent="No pude enviarlo. Inténtalo otra vez o escríbeme por correo.";});
+    }else{
+      var cuerpo="Hola, quiero recibir avisos de nuevas colecciones.\n\nNombre: "+n+"\nCorreo: "+c;
+      window.location.href="mailto:"+NEWSLETTER_EMAIL+"?subject="+encodeURIComponent("Suscripción al boletín")+"&body="+encodeURIComponent(cuerpo);
+      est.textContent="Se abrió tu correo: solo falta enviarlo.";
+    }
+  });
+})();
+</script>
+</body>
+</html>
